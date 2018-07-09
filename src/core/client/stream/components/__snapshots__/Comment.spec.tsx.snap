@@ -10,6 +10,9 @@ exports[`renders username and body 1`] = `
   >
     Marvin
   </withPropsOnChange(Typography)>
+  <withPropsOnChange(Timestamp)
+    date="1995-12-17T06:24:00.000Z"
+  />
   <withPropsOnChange(Typography)>
     Woof
   </withPropsOnChange(Typography)>
@@ -26,6 +29,9 @@ exports[`renders with gutterBottom 1`] = `
   >
     Marvin
   </withPropsOnChange(Typography)>
+  <withPropsOnChange(Timestamp)
+    date="1995-12-17T06:24:00.000Z"
+  />
   <withPropsOnChange(Typography)>
     Woof
   </withPropsOnChange(Typography)>

@@ -6,34 +6,38 @@ framework-validation-required = Dies ist ein Pflichtpfeld.
 
 framework-timeago =
   { $suffix ->
-    [ago] hace
-    [in] en
+    [ago] vor
+    [in] in
   }
   { $value }
   { $unit ->
     [second] { $value ->
-       [1] segundo
-      *[other] segundo
+       [1] Sekunde
+      *[other] Sekunden
     }
     [minuto] { $value ->
-       [1] minuto
-      *[other] minutos
+       [1] Minute
+      *[other] Minuten
     }
     [hour] { $value ->
-       [0] hora
-      *[other] horas
+       [0] Stunde
+      *[other] Stunden
     }
     [day] { $value ->
-       [1] dia
-      *[other] dias
+       [1] Tag
+      *[other] Tage
     }
     [week] { $value ->
-       [1] semana
-      *[other] semanas
+       [1] Woche
+      *[other] Wochen
+    }
+    [month] { $value ->
+      [1] Monat
+      *[other] Monate
     }
     [year] { $value ->
-       [1] año
-      *[other] años
+       [1] Jahr
+      *[other] Jahre
     }
-    *[other] unknown
+    *[other] unknown unit
   }

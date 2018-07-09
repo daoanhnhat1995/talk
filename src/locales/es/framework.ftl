@@ -9,7 +9,7 @@ framework-timeago =
       { $suffix ->
         [ago] hace
         [in] en
-        *[other] desconocido
+        *[other] unknown suffix
       }
       { $value }
       { $unit ->
@@ -33,10 +33,14 @@ framework-timeago =
           [1] semana
           *[other] semanas
         }
+        [month] { $value ->
+          [1] mes
+          *[other] meses
+        }
         [year] { $value ->
           [1] año
           *[other] años
         }
-        *[other] unknown
+        *[other] unknown unit
       }
   }

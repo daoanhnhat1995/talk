@@ -1,6 +1,7 @@
 import cn from "classnames";
 import React from "react";
-import TimeAgo from "react-timeago";
+import TimeAgo, { Formatter } from "react-timeago";
+
 import { UIContext } from "talk-ui/components";
 import { withStyles } from "talk-ui/hocs";
 import { PropTypesOf } from "talk-ui/types";
@@ -14,6 +15,9 @@ interface InnerProps {
   className?: string;
 }
 
+const defaultFormatter: Formatter = (value, unit, suffix, timestamp) =>
+  new Date(timestamp).toISOString();
+
 class Timestamp extends React.Component<InnerProps> {
   public render() {
     const { date, classes, live, className } = this.props;
@@ -24,7 +28,7 @@ class Timestamp extends React.Component<InnerProps> {
             date={date}
             className={cn(className, classes.root)}
             live={live}
-            formatter={timeagoFormatter}
+            formatter={timeagoFormatter || defaultFormatter}
           />
         )}
       </UIContext.Consumer>

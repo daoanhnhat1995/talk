@@ -27,11 +27,15 @@ framework-timeago-time =
       [1] week
       *[other] weeks
     }
+    [month] { $value ->
+      [1] month
+      *[other] months
+    }
     [year] { $value ->
       [1] year
       *[other] years
     }
-    *[other] unknown
+    *[other] unknown unit
   }
 
 framework-timeago =
